@@ -1,0 +1,17 @@
+CREATE KEYSPACE EventProcessor WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+use EventProcessor;
+
+CREATE TABLE EventCollection(
+   eventId text PRIMARY KEY,
+   productId varchar,
+   productPosition int,
+   productRank int,
+   cardId varchar,	
+   section varchar,	
+   page varchar,
+   eventType varchar,		
+   timestamp timestamp,		
+   userType varchar,
+   attributes varchar
+   );
